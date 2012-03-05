@@ -41,7 +41,7 @@ static inline int proto_ports_offset(int proto)
 
 static inline bool ipv4_is_loopback(__be32 addr)
 {
-	return (addr & htonl(0xff000000)) == htonl(0x7f000000);
+	return (addr & htonl(0xffff0000)) == htonl(0x7f000000);
 }
 
 static inline bool ipv4_is_multicast(__be32 addr)

@@ -1495,8 +1495,8 @@ static int inetdev_event(struct notifier_block *this, unsigned long event,
 				INIT_HLIST_NODE(&ifa->hash);
 				ifa->ifa_local =
 				  ifa->ifa_address = htonl(INADDR_LOOPBACK);
-				ifa->ifa_prefixlen = 8;
-				ifa->ifa_mask = inet_make_mask(8);
+				ifa->ifa_prefixlen = 16;
+				ifa->ifa_mask = inet_make_mask(16);
 				in_dev_hold(in_dev);
 				ifa->ifa_dev = in_dev;
 				ifa->ifa_scope = RT_SCOPE_HOST;
