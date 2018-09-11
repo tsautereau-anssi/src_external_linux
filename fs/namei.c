@@ -2972,7 +2972,7 @@ static int may_open(const struct path *path, int acc_mode, int flag)
 
 	if ((acc_mode & MAY_OPENEXEC)
 	    && (S_ISREG(inode->i_mode) || S_ISDIR(inode->i_mode))
-	    && (path->mnt && (path->mnt->mnt_flags & MNT_NOEXEC)))
+	    && (path->mnt && path_noexec(path)))
 		return -EACCES;
 
 	acc_mode &= ~MAY_OPENEXEC;
