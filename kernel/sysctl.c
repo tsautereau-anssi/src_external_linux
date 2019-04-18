@@ -130,11 +130,11 @@ static int sixty __read_only = 60;
 
 static int __maybe_unused neg_one __read_only = -1;
 
-static int zero;
+static int zero __read_only;
 static int __maybe_unused one __read_only = 1;
 static int __maybe_unused two __read_only = 2;
 static int __maybe_unused four __read_only = 4;
-static unsigned long zero_ul;
+static unsigned long zero_ul __read_only;
 static unsigned long one_ul __read_only = 1;
 static unsigned long long_max __read_only = LONG_MAX;
 static int one_hundred __read_only = 100;
